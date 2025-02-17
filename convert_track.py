@@ -14,10 +14,7 @@ if __name__ == "__main__":
         trackName = os.path.basename(basePath)  # Name of the car (TheCity)
         outPath = os.path.join(c.DEFAULT_OUT, trackName)  # Output path (.\out\TheCity)
         texPath = os.path.join(outPath, "textures")  # Texture path (.\out\TheCity\textures)
-        if not os.path.exists(outPath):
-            os.mkdir(outPath)
-        if not os.path.exists(texPath):
-            os.mkdir(texPath)
+        os.makedirs(texPath, exist_ok=True)
 
         textures = {}
         # copy textures if they don't exist and read them into the textures dictionary

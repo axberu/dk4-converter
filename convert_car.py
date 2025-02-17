@@ -41,10 +41,7 @@ if __name__ == "__main__":
         carName = os.path.basename(basePath)  # Name of the car (Fast)
         outPath = os.path.join(c.DEFAULT_OUT, carName)  # Output path (.\out\Fast)
         texPath = os.path.join(outPath, "textures")  # Texture path (.\out\Fast\textures)
-        if not os.path.exists(outPath):
-            os.mkdir(outPath)
-        if not os.path.exists(texPath):
-            os.mkdir(texPath)
+        os.makedirs(texPath, exist_ok=True)
 
         logging.info(f"Starting conversion of car {carName}")
         if carName != SECRET:

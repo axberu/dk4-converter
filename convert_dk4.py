@@ -21,10 +21,7 @@ if __name__ == "__main__":
         if len(files) > 0:
             failed = False
             textures = set()
-            if not os.path.exists(c.DEFAULT_OUT):
-                os.mkdir(c.DEFAULT_OUT)
-            if outFolder != c.DEFAULT_OUT and not os.path.exists(outFolder):
-                os.mkdir(outFolder)
+            os.makedirs(outFolder, exist_ok=True)
             for path in files:
                 file = os.path.basename(path)[:-4]
                 mdl = dk4.getObj(path)
