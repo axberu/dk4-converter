@@ -44,3 +44,9 @@ For a folder containing dk4 files:
 1. Open `<path-to-game>\Data\Dethkarz.dkz` as a zip file.
 2. Navigate to `Data\Models` within the zip.
 3. Extract the desired files/folders.
+
+## TODO
+
+* Reverse conversion, .obj/.mtl to .dk4
+* Support the few .dk3 files the game has (same file structure but without header)
+* Add a doc describing the file format
